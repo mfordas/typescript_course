@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/googlemaps": "^3.40.5",
     "axios": "^0.21.0"
   }
 }
