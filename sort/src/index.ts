@@ -1,27 +1,36 @@
-class Sorter {
-    collection: number[];
+import { NumbersCollection } from './NumbersCollection';
+import { CharactersCollection } from './CharactersCollection';
+import { LinkedList } from './LinkedList';
 
-    constructor (collection: number[]) {
-        this.collection = collection;
-    };
+//Numbers
+const numbersCollection = new NumbersCollection([10, 5, -5, 0]);
 
-    sort(): void {
-        const { length } = this.collection;
+console.log(numbersCollection.data);
 
-        for (let i = 0; i < length; i++) {
-            for (let j = 0; j < length -i - 1; j++) {
-                if (this.collection[j] > this.collection[j+1]) {
-                    const leftHand = this.collection[j];
-                    this.collection[j] = this.collection[j+1];
-                    this.collection[j+1] = leftHand;
-                }
-            }
-        }
-    }
-};
+numbersCollection.sort();
 
-const sorter = new Sorter([18, 5, -5, 0]);
+console.log(numbersCollection.data);
 
-sorter.sort();
+//String
+const charactersCollection = new CharactersCollection('ZacdEWeeeeee');
 
-console.log(sorter);
+console.log(charactersCollection.data);
+
+charactersCollection.sort();
+
+console.log(charactersCollection.data);
+
+//LinkedList
+
+const linkedList = new LinkedList();
+
+linkedList.add(500);
+linkedList.add(-199);
+linkedList.add(3);
+linkedList.add(-4);
+
+linkedList.print();
+
+linkedList.sort();
+
+linkedList.print();
