@@ -1,26 +1,11 @@
-class Sorter {
-    collection: number[];
+import { Sorter } from './Sorter';
+import { NumbersCollection } from './NumbersCollection';
 
-    constructor (collection: number[]) {
-        this.collection = collection;
-    };
+const numbersCollection = new NumbersCollection([10, 5, -5, 0]);
 
-    sort(): void {
-        const { length } = this.collection;
+const sorter = new Sorter(numbersCollection);
 
-        for (let i = 0; i < length; i++) {
-            for (let j = 0; j < length -i - 1; j++) {
-                if (this.collection[j] > this.collection[j+1]) {
-                    const leftHand = this.collection[j];
-                    this.collection[j] = this.collection[j+1];
-                    this.collection[j+1] = leftHand;
-                }
-            }
-        }
-    }
-};
-
-const sorter = new Sorter([18, 5, -5, 0]);
+console.log(numbersCollection.data);
 
 sorter.sort();
 
