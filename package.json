@@ -11,5 +11,8 @@
   "dependencies": {
     "@types/googlemaps": "^3.40.5",
     "axios": "^0.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.3"
   }
 }
