@@ -9,6 +9,11 @@ function logger(req: Request, res: Response, next: NextFunction) {
 
 @controller('/auth')
 export class LoginController {
+  @get('/')
+  add(a: number, b: number): number {
+    return a + b;
+  }
+
   @get('/login')
   getLogin(req: Request, res: Response): void {
     res.send(`
